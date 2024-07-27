@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>SQR App by Harshit</title>
+
+
+		<style>
+			* { font-size: 70px;}
+			body { background-color : azure; }
+		</style>
+	</head>
+
+
+	<body>	
+		<center>
+		<h1>SQR App</h1>
+
+		<form onsubmit="show()">
+			<input type = "number" step = "any" placeholder="enter your number" id="num"/>
+			<br/><br/>
+			<input type = "submit" value = "Find Square"/>
+		</form>
+		
+
+		<h2 id="msg" />
+
+			<script>
+				function show()
+				{
+					event.preventDefault();
+					let num = document.getElementById("num");
+					let msg = document.getElementById("msg");
+					
+						if(num.value==="")	
+						{
+							alert("Please enter number");
+							msg.innerHTML = "";
+							name.focus();
+							return;
+						}
+					let n = parseFloat(num.value);
+					let r = n**2;
+					let ans = "square = " + r.toFixed(2);
+					msg.innerHTML = ans;
+				}
+
+			</script>
+	
+		</center>
+	</body>
+
+
+</html>
